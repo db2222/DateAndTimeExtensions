@@ -12,6 +12,7 @@
         <RepositoryUrl>https://github.com/db2222/DateAndTimeExtensions</RepositoryUrl>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <Copyright>MIT License</Copyright>
+        <PackageReleaseNotes>See https://github.com/db2222/DateAndTimeExtensions/releases for the changes.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
