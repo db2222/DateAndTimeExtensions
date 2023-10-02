@@ -109,9 +109,19 @@ public static class DateTimeExt
         return new DateTime(dateTime.Year, 12, 31, 23, 59, 59);
     }
 
+    public static bool IsWeekday()
+    {
+        return IsWeekday(DateTime.Today);
+    }
+
     public static bool IsWeekday(this DateTime dateTime)
     {
         return dateTime.DayOfWeek != DayOfWeek.Saturday && dateTime.DayOfWeek != DayOfWeek.Sunday;
+    }
+
+    public static bool IsWeekend()
+    {
+        return IsWeekend(DateTime.Today);
     }
 
     public static bool IsWeekend(this DateTime dateTime)

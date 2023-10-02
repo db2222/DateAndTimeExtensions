@@ -58,9 +58,19 @@ public static class DateOnlyExt
         return new DateOnly(dateOnly.Year, 12, 31);
     }
 
+    public static bool IsWeekday()
+    {
+        return IsWeekday(Today());
+    }
+
     public static bool IsWeekday(this DateOnly dateOnly)
     {
         return dateOnly.DayOfWeek != DayOfWeek.Saturday && dateOnly.DayOfWeek != DayOfWeek.Sunday;
+    }
+
+    public static bool IsWeekend()
+    {
+        return IsWeekend(Today());
     }
 
     public static bool IsWeekend(this DateOnly dateOnly)
