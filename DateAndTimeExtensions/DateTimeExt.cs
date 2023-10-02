@@ -163,7 +163,7 @@ public static class DateTimeExt
         return (System.DateTime.UtcNow - dateTime).Days;
     }
 
-    public static System.DateTime SetTime(this System.DateTime dateTime, int hours, int minutes, int seconds = 0, int milliseconds = 0)
+    public static System.DateTime SetTime(this System.DateTime dateTime, int hours, int minutes = 0, int seconds = 0, int milliseconds = 0)
     {
         var timespan = new TimeSpan(0, hours, minutes, seconds, milliseconds);
         return dateTime.Date + timespan;
