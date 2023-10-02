@@ -2,18 +2,18 @@
 
 public static class TimeOnlyExt
 {
-    public static System.TimeOnly Now()
+    public static TimeOnly Now()
     {
-        return System.TimeOnly.FromDateTime(System.DateTime.Now);
+        return TimeOnly.FromDateTime(DateTime.Now);
     }
 
-    public static System.TimeOnly UtcNow()
+    public static TimeOnly UtcNow()
     {
-        return System.TimeOnly.FromDateTime(System.DateTime.UtcNow);
+        return TimeOnly.FromDateTime(DateTime.UtcNow);
     }
 
-    public static System.TimeOnly Midday()
+    public static TimeOnly Midday()
     {
-        return System.TimeOnly.FromTimeSpan(TimeSpan.FromHours(12));
+        return TimeOnly.FromTimeSpan(TimeSpan.FromHours(12));
     }
 }

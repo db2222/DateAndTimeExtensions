@@ -2,92 +2,92 @@
 
 public static class DateOnlyExt
 {
-    public static System.DateOnly Today()
+    public static DateOnly Today()
     {
-        return System.DateOnly.FromDateTime(System.DateTime.Today);
+        return DateOnly.FromDateTime(DateTime.Today);
     }
 
-    public static System.DateOnly Tomorrow()
+    public static DateOnly Tomorrow()
     {
         return Today().AddDays(1);
     }
 
-    public static System.DateOnly Yesterday()
+    public static DateOnly Yesterday()
     {
         return Today().AddDays(-1);
     }
 
-    public static System.DateOnly FirstOfMonth()
+    public static DateOnly FirstOfMonth()
     {
         return FirstOfMonth(Today());
     }
 
-    public static System.DateOnly FirstOfMonth(this System.DateOnly dateOnly)
+    public static DateOnly FirstOfMonth(this DateOnly dateOnly)
     {
-        return new System.DateOnly(dateOnly.Year, dateOnly.Month, 1);
+        return new DateOnly(dateOnly.Year, dateOnly.Month, 1);
     }
 
-    public static System.DateOnly LastOfMonth()
+    public static DateOnly LastOfMonth()
     {
         return LastOfMonth(Today());
     }
 
-    public static System.DateOnly LastOfMonth(this System.DateOnly dateOnly)
+    public static DateOnly LastOfMonth(this DateOnly dateOnly)
     {
-        var day = System.DateTime.DaysInMonth(dateOnly.Year, dateOnly.Month);
-        return new System.DateOnly(dateOnly.Year, dateOnly.Month, day);
+        var day = DateTime.DaysInMonth(dateOnly.Year, dateOnly.Month);
+        return new DateOnly(dateOnly.Year, dateOnly.Month, day);
     }
 
-    public static System.DateOnly FirstOfYear()
+    public static DateOnly FirstOfYear()
     {
-        return new System.DateOnly(System.DateTime.Today.Year, 1, 1);
+        return new DateOnly(DateTime.Today.Year, 1, 1);
     }
 
-    public static System.DateOnly FirstOfYear(this System.DateOnly dateOnly)
+    public static DateOnly FirstOfYear(this DateOnly dateOnly)
     {
-        return new System.DateOnly(dateOnly.Year, 1, 1);
+        return new DateOnly(dateOnly.Year, 1, 1);
     }
 
-    public static System.DateOnly LastOfYear()
+    public static DateOnly LastOfYear()
     {
-        return new System.DateOnly(System.DateTime.Today.Year, 12, 31);
+        return new DateOnly(DateTime.Today.Year, 12, 31);
     }
 
-    public static System.DateOnly LastOfYear(this System.DateOnly dateOnly)
+    public static DateOnly LastOfYear(this DateOnly dateOnly)
     {
-        return new System.DateOnly(dateOnly.Year, 12, 31);
+        return new DateOnly(dateOnly.Year, 12, 31);
     }
 
-    public static bool IsWeekday(this System.DateOnly dateOnly)
+    public static bool IsWeekday(this DateOnly dateOnly)
     {
         return dateOnly.DayOfWeek != DayOfWeek.Saturday && dateOnly.DayOfWeek != DayOfWeek.Sunday;
     }
 
-    public static bool IsWeekend(this System.DateOnly dateOnly)
+    public static bool IsWeekend(this DateOnly dateOnly)
     {
         return dateOnly.DayOfWeek is DayOfWeek.Saturday or DayOfWeek.Sunday;
     }
 
-    public static System.DateOnly NextWorkday(this System.DateOnly dateOnly)
+    public static DateOnly NextWorkday(this DateOnly dateOnly)
     {
         do dateOnly = dateOnly.AddDays(1);
         while (IsWeekend(dateOnly));
         return dateOnly;
     }
 
-    public static System.DateOnly PreviousWorkday(this System.DateOnly dateOnly)
+    public static DateOnly PreviousWorkday(this DateOnly dateOnly)
     {
         do dateOnly = dateOnly.AddDays(-1);
         while (IsWeekend(dateOnly));
         return dateOnly;
     }
 
-    public static int DaysFromToday(this System.DateOnly dateOnly)
+    public static int DaysFromToday(this DateOnly dateOnly)
     {
         return dateOnly.DayNumber - Today().DayNumber;
     }
 
-    public static int DaysSinceToday(this System.DateOnly dateOnly)
+    public static int DaysSinceToday(this DateOnly dateOnly)
     {
         return Today().DayNumber - dateOnly.DayNumber;
     }
