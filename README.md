@@ -47,12 +47,12 @@ If the classes would be named like their .NET counterparts you would have to con
 - StartOfMonth(this DateTime dateTime):DateTime
 - StartOfYear():DateTime
 - StartOfYear(this DateTime dateTime):DateTime
-- Tomorrow():DateTime
-- TomorrowFromNow():DateTime
-- TomorrowFromUtcNow():DateTime
-- Yesterday():DateTime
-- YesterdayFromNow():DateTime
-- YesterdayFromUtcNow():DateTime
+- Tomorrow:DateTime
+- TomorrowFromNow:DateTime
+- TomorrowFromUtcNow:DateTime
+- Yesterday:DateTime
+- YesterdayFromNow:DateTime
+- YesterdayFromUtcNow:DateTime
 
 ## DateOnly
 - DaysFromToday(this DateOnly dateOnly):int
@@ -73,11 +73,11 @@ If the classes would be named like their .NET counterparts you would have to con
 - NextWorkday(this DateOnly dateOnly):DateOnly
 - PreviousWorkday():DateOnly
 - PreviousWorkday(this DateOnly dateOnly):DateOnly
-- Today():DateOnly
-- Tomorrow():DateOnly
-- Yesterday():DateOnly
+- Today:DateOnly
+- Tomorrow:DateOnly
+- Yesterday:DateOnly
 
 ## TimeOnly
-- Midday():TimeOnly
-- Now():TimeOnly
-- UtcNow():TimeOnly
+- Midday:TimeOnly
+- Now:TimeOnly
+- UtcNow:TimeOnly

@@ -2,35 +2,17 @@
 
 public static class DateTimeExt
 {
-    public static DateTime Tomorrow()
-    {
-        return DateTime.Today.AddDays(1);
-    }
+    public static DateTime Tomorrow => DateTime.Today.AddDays(1);
 
-    public static DateTime TomorrowFromNow()
-    {
-        return DateTime.Now.AddDays(1);
-    }
+    public static DateTime TomorrowFromNow => DateTime.Now.AddDays(1);
 
-    public static DateTime TomorrowFromUtcNow()
-    {
-        return DateTime.UtcNow.AddDays(1);
-    }
+    public static DateTime TomorrowFromUtcNow => DateTime.UtcNow.AddDays(1);
 
-    public static DateTime Yesterday()
-    {
-        return DateTime.Today.AddDays(-1);
-    }
+    public static DateTime Yesterday => DateTime.Today.AddDays(-1);
 
-    public static DateTime YesterdayFromNow()
-    {
-        return DateTime.Now.AddDays(-1);
-    }
+    public static DateTime YesterdayFromNow => DateTime.Now.AddDays(-1);
 
-    public static DateTime YesterdayFromUtcNow()
-    {
-        return DateTime.UtcNow.AddDays(-1);
-    }
+    public static DateTime YesterdayFromUtcNow => DateTime.UtcNow.AddDays(-1);
 
     public static DateTime StartOfDay(this DateTime dateTime)
     {

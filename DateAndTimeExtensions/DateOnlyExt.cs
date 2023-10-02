@@ -2,24 +2,15 @@
 
 public static class DateOnlyExt
 {
-    public static DateOnly Today()
-    {
-        return DateOnly.FromDateTime(DateTime.Today);
-    }
+    public static DateOnly Today => DateOnly.FromDateTime(DateTime.Today);
 
-    public static DateOnly Tomorrow()
-    {
-        return Today().AddDays(1);
-    }
+    public static DateOnly Tomorrow => Today.AddDays(1);
 
-    public static DateOnly Yesterday()
-    {
-        return Today().AddDays(-1);
-    }
+    public static DateOnly Yesterday => Today.AddDays(-1);
 
     public static DateOnly FirstOfMonth()
     {
-        return FirstOfMonth(Today());
+        return FirstOfMonth(Today);
     }
 
     public static DateOnly FirstOfMonth(this DateOnly dateOnly)
@@ -29,7 +20,7 @@ public static class DateOnlyExt
 
     public static DateOnly LastOfMonth()
     {
-        return LastOfMonth(Today());
+        return LastOfMonth(Today);
     }
 
     public static DateOnly LastOfMonth(this DateOnly dateOnly)
@@ -60,7 +51,7 @@ public static class DateOnlyExt
 
     public static bool IsWeekday()
     {
-        return IsWeekday(Today());
+        return IsWeekday(Today);
     }
 
     public static bool IsWeekday(this DateOnly dateOnly)
@@ -70,7 +61,7 @@ public static class DateOnlyExt
 
     public static bool IsWeekend()
     {
-        return IsWeekend(Today());
+        return IsWeekend(Today);
     }
 
     public static bool IsWeekend(this DateOnly dateOnly)
@@ -80,7 +71,7 @@ public static class DateOnlyExt
 
     public static DateOnly NextWorkday()
     {
-        return NextWorkday(Today());
+        return NextWorkday(Today);
     }
 
     public static DateOnly NextWorkday(this DateOnly dateOnly)
@@ -92,7 +83,7 @@ public static class DateOnlyExt
 
     public static DateOnly PreviousWorkday()
     {
-        return PreviousWorkday(Today());
+        return PreviousWorkday(Today);
     }
 
     public static DateOnly PreviousWorkday(this DateOnly dateOnly)
@@ -104,11 +95,11 @@ public static class DateOnlyExt
 
     public static int DaysFromToday(this DateOnly dateOnly)
     {
-        return dateOnly.DayNumber - Today().DayNumber;
+        return dateOnly.DayNumber - Today.DayNumber;
     }
 
     public static int DaysSinceToday(this DateOnly dateOnly)
     {
-        return Today().DayNumber - dateOnly.DayNumber;
+        return Today.DayNumber - dateOnly.DayNumber;
     }
 }
