@@ -129,11 +129,21 @@ public static class DateTimeExt
         return dateTime.DayOfWeek is DayOfWeek.Saturday or DayOfWeek.Sunday;
     }
 
+    public static DateTime NextWorkday()
+    {
+        return NextWorkday(DateTime.Today);
+    }
+
     public static DateTime NextWorkday(this DateTime dateTime)
     {
         do dateTime = dateTime.AddDays(1);
         while (IsWeekend(dateTime));
         return dateTime;
+    }
+
+    public static DateTime PreviousWorkday()
+    {
+        return PreviousWorkday(DateTime.Today);
     }
 
     public static DateTime PreviousWorkday(this DateTime dateTime)

@@ -78,11 +78,21 @@ public static class DateOnlyExt
         return dateOnly.DayOfWeek is DayOfWeek.Saturday or DayOfWeek.Sunday;
     }
 
+    public static DateOnly NextWorkday()
+    {
+        return NextWorkday(Today());
+    }
+
     public static DateOnly NextWorkday(this DateOnly dateOnly)
     {
         do dateOnly = dateOnly.AddDays(1);
         while (IsWeekend(dateOnly));
         return dateOnly;
+    }
+
+    public static DateOnly PreviousWorkday()
+    {
+        return PreviousWorkday(Today());
     }
 
     public static DateOnly PreviousWorkday(this DateOnly dateOnly)
