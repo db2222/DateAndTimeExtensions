@@ -29,15 +29,19 @@ If the classes would be named like their .NET counterparts you would have to con
 - EndOfToday():DateTime
 - EndOfYear():DateTime
 - EndOfYear(this DateTime dateTime):DateTime
+- IsWeekday():bool
 - IsWeekday(this DateTime dateTime):bool
+- IsWeekend():bool
 - IsWeekend(this DateTime dateTime):bool
 - LastOfMonth():DateTime
 - LastOfMonth(this DateTime dateTime):DateTime
 - LastOfYear():DateTime
 - LastOfYear(this DateTime dateTime):DateTime
+- NextWorkday():DateTime
 - NextWorkday(this DateTime dateTime):DateTime
+- PreviousWorkday():DateTime
 - PreviousWorkday(this DateTime dateTime):DateTime
-- SetTime(this DateTime dateTime, int hours, int minutes, int seconds = 0, int milliseconds = 0):DateTime
+- SetTime(this DateTime dateTime, int hours, int minutes = 0, int seconds = 0, int milliseconds = 0):DateTime
 - StartOfDay(this DateTime dateTime):DateTime
 - StartOfMonth():DateTime
 - StartOfMonth(this DateTime dateTime):DateTime
@@ -57,13 +61,17 @@ If the classes would be named like their .NET counterparts you would have to con
 - FirstOfMonth(this DateOnly dateOnly):DateOnly
 - FirstOfYear():DateOnly
 - FirstOfYear(this DateOnly dateOnly):DateOnly
+- IsWeekday():bool
 - IsWeekday(this DateOnly dateOnly):bool
+- IsWeekend():bool
 - IsWeekend(this DateOnly dateOnly):bool
 - LastOfMonth():DateOnly
 - LastOfMonth(this DateOnly dateOnly):DateOnly
 - LastOfYear():DateOnly
 - LastOfYear(this DateOnly dateOnly):DateOnly
+- NextWorkday():DateOnly
 - NextWorkday(this DateOnly dateOnly):DateOnly
+- PreviousWorkday():DateOnly
 - PreviousWorkday(this DateOnly dateOnly):DateOnly
 - Today():DateOnly
 - Tomorrow():DateOnly
