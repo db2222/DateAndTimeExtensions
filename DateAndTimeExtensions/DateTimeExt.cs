@@ -1,6 +1,6 @@
 ﻿namespace DateAndTimeExtensions;
 
-public static class DateTime
+public static class DateTimeExt
 {
     public static System.DateTime Tomorrow()
     {

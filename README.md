@@ -10,9 +10,10 @@ There are 2 type of extensions:
 - instance (parameter `this`)
 - class
 
-However, C# doesn't allow to extend static classes themselves. \
-This is why for easier usage the extension classes are named exactly as their .NET counterparts. \
-Just include the namespace `DateAndTimeExtensions`.
+However, C# unfortunately doesn't allow to extend static classes themselves. \
+This is why you need to call `DateTimeExt`, `DateOnlyExt` or `TimeOnlyExt` for the class variants (no `this` parameter). \
+\
+If the classes would be named like their .NET counterparts you would have to constantly fully qualify the namespace which would be cumbersome.
 
 # Extension methods
 ## DateTime

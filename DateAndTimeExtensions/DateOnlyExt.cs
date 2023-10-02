@@ -1,6 +1,6 @@
 ﻿namespace DateAndTimeExtensions;
 
-public static class DateOnly
+public static class DateOnlyExt
 {
     public static System.DateOnly Today()
     {

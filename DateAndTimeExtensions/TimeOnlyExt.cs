@@ -1,6 +1,6 @@
 ﻿namespace DateAndTimeExtensions;
 
-public static class TimeOnly
+public static class TimeOnlyExt
 {
     public static System.TimeOnly Now()
     {
